@@ -1,0 +1,267 @@
+/* Стили для заголовка с классом header */
+.header {
+    display: flex;
+    font-size: 24px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(1, 1, 1, 1); /* Цвет фона */
+    color: salmon; /* Цвет текста */
+    padding: 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 3px solid rgba(100, 10, 10, 1);
+    z-index: 3;
+    text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.4); /* Цвет и параметры тени текста */
+}
+
+.logo {
+    margin-left: 650px; /* Помещает изображение справа */
+    top: 1px;
+}
+
+/* Стили для навигации с классом nav */
+/* Стили для меню */
+.nav {
+    list-style-type: none;
+    padding: 0;
+    background-color: rgba(20, 20, 20, 1);
+
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    border: 2px solid rgba(100, 10, 10, 1);
+    text-shadow: 0px 0px 0px rgba(20, 20, 20, 1);
+    z-index: 4;
+}
+
+.nav-item {
+    display: inline-block; /* Изменяем на inline-block для горизонтального расположения */
+    position: relative;
+    padding: 10px;
+}
+
+.nav-item:hover .sub-menu {
+    display: flex; /* Показываем подменю при наведении на родительский пункт */
+}
+
+.sub-menu {
+    display: none; /* Изначально скрываем подменю */
+    position: absolute;
+    top: 100%; /* Располагаем подменю под родительским пунктом */
+    background-color: rgba(20, 20, 20, 1);
+    padding: 10px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: salmon;  /* Цвет текста ссылок в меню */
+    font-family: Times New Roman, sans-serif; /* Шрифт текста */
+    font-size: 22px; /* Размер текста */
+    font-weight: bold; /* Начертание текста (жирный) */
+}
+
+.sub-menu li {
+    list-style-type: none; /* Убираем маркеры списка для подменю */
+}
+
+.sub-menu li a {
+    margin-top: 5px;
+    margin-right: 50px;
+    color: rgba(220, 10, 10, 1);
+    background-color: rgba(20, 20, 20, 1);
+    text-decoration: none;
+}
+
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link:hover {
+    text-decoration: none;
+    color: rgba(250, 20, 20, 1);/* Цвет текста ссылок в меню */
+    font-family: Centaur, sans-serif; /* Шрифт текста */
+    font-size: 20px; /* Размер текста */
+    font-weight: bold; /* Начертание текста (жирный) */
+}
+
+main {
+  margin-top: 210px; /* Добавляем отступ сверху для контента, чтобы он не перекрывался заголовком */
+  padding-right: 60px; /* Отступ справа */
+}
+
+
+/* Градиентная заливка фона страницы с классом body */
+main {
+    margin-top: 80px; /* Добавляем отступ сверху для контента, чтобы он не перекрывался заголовком */
+    padding: 20px; /* Отступ внутри рамки */
+    background-color: rgba(255, 120, 130, 0.3); /* Цвет фона внутри рамки */
+    padding-right: 100px; /* Отступ справа */
+}
+
+
+/* Градиентная заливка фона страницы с классом body */
+.body {
+    background-image: url('fon_1.jpg');
+    background-attachment: fixed;
+    background-size: cover; /* или любое другое значение, например contain */
+
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(20, 20, 20, 1);
+    color: rgba(255, 255, 255, 1);
+    font-size: 20px;
+    max-width: 1300px; /* значения ширины в пикселях */
+    margin:  0 auto;; 
+}
+
+.custom-section {
+    padding: 70px; /* Отступ внутри рамки */
+
+
+}
+
+    .container {
+        display: flex;
+        align-items: center;
+
+    }
+
+    .hidden-content {
+        display: none;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: rgba(190, 170, 120, 0.5);
+        font-family: Arial; /* Шрифт текста */
+        font-size: 16px; /* Размер текста */
+    }
+
+    button {
+        border: none;
+        background: none;
+        padding: 0;
+        cursor: pointer; /* Изменяем курсор на указатель при наведении */
+    }
+
+    h3 {
+        margin-right: 10px; /* Добавляем отступ справа от заголовка */
+    }
+
+    h10 {
+        margin-right: 10px; /* Добавляем отступ справа от заголовка */
+    }
+
+
+#openFormButton {
+    font-family: Georgia, sans-serif; /* Шрифт текста */
+    font-size: 18px; /* Размер текста */
+    position: fixed;
+    bottom: 50px; /* Можно настроить отступ снизу */
+    right: 25px; /* Можно настроить отступ справа */
+    z-index: 1000; /* Устанавливаем z-index, чтобы кнопка была поверх других элементов */
+    width: 130px; /* Задаем ширину кнопки */
+    height: 60px; /* Задаем высоту кнопки */
+    background-color: salmon; /* Цвет кнопки salmon */
+    color: rgba(250, 250, 250, 1); /* Цвет текста на кнопке */
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 1); /* Добавляем неоновую тень и обводку */
+    animation: neon-glow 1s ease-in-out infinite alternate; /* Анимация мерцания */
+    border: 2px solid rgba(50, 50, 50, 0.8); /* Добавляем рамку вокруг кнопки */
+}
+
+@keyframes neon-glow {
+    0% {
+        color: white; /* Цвет текста на кнопке */
+        background-color: salmon; /* Цвет фона кнопки */
+        text-shadow:
+            -1px -1px 0 rgba(100, 100, 100, 0.8),  
+            1px -1px 0 rgba(100, 100, 100, 0.8),
+            -1px 1px 0 rgba(100, 100, 100, 0.8),
+            1px 1px 0 rgba(100, 100, 100, 0.8); /* Тени для создания обводки */
+    }
+    100% {
+        width: 135px; /* Задаем ширину кнопки */
+        height: 62px; /* Задаем высоту кнопки */
+        border: 2px solid rgba(0, 0, 0, 0.8); /* Добавляем рамку вокруг кнопки */
+        box-shadow: 0 0 25px rgba(255, 255, 255, 1); /* Добавляем неоновую тень и обводку */
+
+        color: rgba(250, 250, 250, 1); /* Инвертируем цвет текста на кнопке */
+        background-color: rgba(250, 20, 20, 1); /* Инвертируем цвет фона кнопки */
+        font-size: 19px;
+        text-shadow:
+            -1.5px -1.5px 0 rgba(0, 0, 0, 1),  
+            1.5px -1.5px 0 rgba(0, 0, 0, 1),
+            -1.5px 1.5px 0 rgba(0, 0, 0, 1),
+            1.5px 1.5px 0 rgba(0, 0, 0, 1); /* Тени для создания обводки */
+    }
+}
+
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+}
+
+#formContainer {
+    font-family: Georgia, sans-serif; /* Шрифт текста */
+    font-size: 22px; /* Размер текста */
+
+    border-radius: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(130, 30, 30, 1);
+    padding: 50px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px; /* Задаем размер крестика */
+    cursor: pointer;
+}
+
+.button-link3 {
+   font-weight: bold;
+   font-size: 14px;
+   color: rgba(1, 1, 1, 1);
+
+}
+
+.footer-section {
+    margin-top: 20px;
+    padding: 5px;
+    background-color: rgba(255, 230, 230, 0.7);
+    text-align: center;
+}
+
+.footer-heading {
+    font-size: 22px;
+    color: rgba(0, 0, 0, 1);
+    text-align: left; 
+    text-align: center;
+
+}
+
+.footer-content {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 1);
+    text-align: left; 
+    text-align: center;
+
+}
+
+.footer-content strong {
+    font-weight: bold;
+}
+

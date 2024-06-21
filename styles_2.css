@@ -1,0 +1,139 @@
+main {
+    margin-top: 250px; /* Добавляем отступ сверху для контента, чтобы он не перекрывался заголовком */
+
+}
+
+
+/* Градиентная заливка фона страницы с классом body */
+.body {
+    background-image: url('fon_2.jpg');
+    background-attachment: fixed;
+    background-size: cover; /* или любое другое значение, например contain\cover */
+
+    font-family: 'Roboto', sans-serif;
+    color: rgba(255, 255, 255, 1);
+    font-size: 19px;
+    max-width: 1300px; /* значения ширины в пикселях */
+    margin:  0 auto;; 
+}
+
+.main-link {
+    width: 180px;
+    height: 50px;
+    font-size: 18px;
+    font-family: Georgia, sans-serif; /* Шрифт текста */
+    border-radius: 10px;
+    background-color: rgba(175, 160, 160, 0.2); /* Цвет фона внутри рамки */
+    color: rgba(255, 40, 40, 1); /* Цвет текста */
+    text-decoration: none; /* Убрать подчеркивание */
+    font-weight: bold; /* Жирный шрифт *
+    box-shadow: 0 0 25px rgba(255, 25, 25, 1); /* Добавляем неоновую тень и обводку */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 1); /* Добавляем неоновую тень и обводку */
+    border: 2px solid rgba(50, 50, 50, 0.8); /* Добавляем рамку вокруг кнопки */
+    margin-bottom: 10px; /* Отступ между элементами формы */
+    justify-content: center; /* Выравниваем содержимое по горизонтали */
+    align-items: center; /* Выравниваем содержимое по вертикали */
+}
+
+.main-link:hover {
+    color: rgba(255, 20, 20, 1); 
+    animation: neon-glow 0.8s ease-in-out infinite alternate; /* Анимация мерцания */
+    
+
+}
+
+@keyframes neon-glow {
+    0% {   
+        color: rgba(255, 255, 255, 1);
+        background-color: rgba(175, 160, 160, 0.2); /* Цвет фона кнопки */
+        text-shadow:
+            -1px -1px 0 rgba(100, 100, 100, 0.8),  
+            1px -1px 0 rgba(100, 100, 100, 0.8),
+            -1px 1px 0 rgba(100, 100, 100, 0.8),
+            1px 1px 0 rgba(100, 100, 100, 0.8); /* Тени для создания обводки */
+    }
+    100% {  
+        box-shadow: 0 0 50px rgba(255, 190, 0, 1); /* Добавляем неоновую тень и обводку */
+        color: rgba(255, 255, 255, 1); /* Инвертируем цвет текста на кнопке */
+        background-color: rgba(240, 200, 20, 1); /* Инвертируем цвет фона кнопки */
+        text-shadow:
+            -1px -1px 0 rgba(0, 0, 0, 1),  
+            1px -1px 0 rgba(0, 0, 0, 1),
+            -1px 1px 0 rgba(0, 0, 0, 1),
+            1px 1px 0 rgba(0, 0, 0, 1); /* Тени для создания обводки */
+    }
+}
+
+
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+
+#closeFormButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+
+
+#formContainer {
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(130, 30, 30, 0.9);
+    padding: 60px;
+}
+
+input[type="text"],
+input[type="email"] {
+    border-radius: 10px; /* Радиус скругления углов в пикселях */
+    padding: 5px; /* Добавление небольшого отступа вокруг текста внутри поля */
+    margin-bottom: 10px; /* Добавление отступа между полями */
+    background-color: rgba(255, 230, 230, 1);
+}
+
+
+textarea {
+    width: 400px; /* Ширина элементов формы на всю ширину контейнера */
+    height: 170px;
+    margin-bottom: 10px; /* Отступ между элементами формы */
+    margin-bottom: 10px; /* Отступ между элементами формы */
+    box-sizing: border-box; /* Учитывать padding и border при расчете ширины */
+}
+
+
+
+.calendar {
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.week {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.date-button {
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.date-button:hover {
+    background-color: #e0e0e0;
+}

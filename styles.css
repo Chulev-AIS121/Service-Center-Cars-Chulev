@@ -1,0 +1,339 @@
+/* Стили для заголовка с классом header */
+.header {
+    display: flex;
+    font-size: 24px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(1, 1, 1, 1); /* Цвет фона */
+    color: salmon; /* Цвет текста */
+    padding: 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 3px solid rgba(100, 10, 10, 1);
+    z-index: 3;
+    text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.4); /* Цвет и параметры тени текста */
+}
+
+.logo {
+    margin-left: 650px; /* Помещает изображение справа */
+}
+
+/* Стили для навигации с классом nav */
+/* Стили для меню */
+.nav {
+    list-style-type: none;
+    padding: 0;
+    background-color: rgba(30, 3, 3, 1);
+    border-top-right-radius: 10px;
+
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 76%;
+    border: 2px solid rgba(100, 10, 10, 1);
+    text-shadow: 0px 0px 0px rgba(20, 20, 20, 1);
+    z-index: 3;
+}
+
+.nav-item {
+    display: inline-block; /* Изменяем на inline-block для горизонтального расположения */
+    position: relative;
+    padding: 10px;
+}
+
+.nav-item:hover .sub-menu {
+    display: flex; /* Показываем подменю при наведении на родительский пункт */
+}
+
+.sub-menu {
+    display: none; /* Изначально скрываем подменю */
+    position: absolute;
+    top: 100%; /* Располагаем подменю под родительским пунктом */
+    background-color: rgba(20, 20, 20, 1);
+    padding: 10px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: salmon;
+    font-family: Times New Roman; /* Шрифт текста */
+    font-size: 22px; /* Размер текста */
+    font-weight: bold; /* Начертание текста (жирный) */
+}
+
+.sub-menu li {
+    list-style-type: none; /* Убираем маркеры списка для подменю */
+}
+
+.sub-menu li a {
+    margin-top: 5px;
+    margin-right: 50px;
+    color: rgba(220, 10, 10, 1);
+    background-color: rgba(20, 20, 20, 1);
+    text-decoration: none;
+}
+
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link:hover {
+    text-decoration: none;
+    color: rgba(255, 120, 130, 1);/* Цвет текста ссылок в меню */
+    font-family: Times New Roman, sans-serif; /* Шрифт текста */
+    font-size: 25px; /* Размер текста */
+    font-weight: bold; /* Начертание текста (жирный) */
+}
+
+main {
+  margin-top: 100px; /* Добавляем отступ сверху для контента, чтобы он не перекрывался заголовком */
+}
+
+
+/* Градиентная заливка фона страницы с классом body */
+.body {
+    background-image: url('fon.png');
+    background-attachment: fixed;
+
+
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(20, 20, 20, 1);
+    color: rgba(255, 255, 255, 1);
+    font-size: 19px;
+    max-width: 1250px; /* значения ширины в пикселях */
+    margin:  0 auto;; 
+}
+
+.custom-section {
+    padding: 20px; /* Отступ внутри рамки */
+    background-color: rgba(255, 120, 130, 0.3); /* Цвет фона внутри рамки */
+    padding-right: 100px; /* Отступ справа */
+
+}
+
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    background-color:  rgba(70, 70, 70, 1);
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color:  rgba(70, 70, 70, 1);
+    font-family: Georgia; /* Шрифт текста */
+    font-size: 24px; /* Размер текста */
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color:  rgba(70, 70, 70, 1);
+}
+
+tr:hover {
+    background-color:  rgba(200, 10, 10, 1);
+}
+
+    .team-member {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .image-container {
+        border: 1px solid black; /* Цвет и толщина рамки */
+        padding: 5px; /* Отступ вокруг изображения */
+        background-color: white;
+        margin-right: 20px; /* Отступ справа от изображения */
+    }
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+#formContainer {
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(130, 30, 30, 0.9);
+    padding: 60px;
+}
+
+#closeFormButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+
+input[type="text"],
+input[type="email"] {
+    border-radius: 10px; /* Радиус скругления углов в пикселях */
+    padding: 5px; /* Добавление небольшого отступа вокруг текста внутри поля */
+    margin-bottom: 10px; /* Добавление отступа между полями */
+    background-color: rgba(255, 230, 230, 1);
+}
+
+
+textarea {
+    width: 400px; /* Ширина элементов формы на всю ширину контейнера */
+    height: 170px;
+    margin-bottom: 10px; /* Отступ между элементами формы */
+    box-sizing: border-box; /* Учитывать padding и border при расчете ширины */
+}
+
+button {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px; /* Задаем отступы для кнопки */
+    cursor: pointer; /* Изменяем курсор на указатель при наведении */
+}
+
+
+#galleryOverlay {
+    display: none;  /* Скрыть элемент */
+    position: fixed;  /* Фиксированное позиционирование */
+    top: 0;  /* Расположить сверху */
+    left: 0;  /* Расположить слева */
+    width: 100%;  /* Ширина 100% */
+    height: 100%;  /* Высота 100% */
+    background-color: rgba(0, 0, 0, 0.7);  /* Цвет фона с прозрачностью */
+    z-index: 999;  /* Порядок слоев */
+}
+
+
+
+#galleryContainer {
+    position: absolute;  /* Абсолютное позиционирование */
+    top: 50%;  /* Расположить по вертикали на 50% */
+    left: 50%;  /* Расположить по горизонтали на 50% */
+    transform: translate(-50%, -50%);  /* Центрирование элемента */
+    background-color: rgba(130, 30, 30, 0.7);  /* Белый фон */
+    padding: 10px;  /* Внутренний отступ 20px */
+    max-height: 95%;  /* Максимальная высота 90% */
+    overflow-y: auto;  /* Вертикальная прокрутка при необходимости */
+}
+
+.gallery {
+    display: flex;  /* Использовать flexbox для расположения элементов */
+    flex-wrap: wrap;  /* Обертывание элементов при необходимости */
+    justify-content: center;  /* Выравнивание элементов по центру */
+}
+
+.gallery img {
+    margin: 5px;  /* Внешний отступ у изображений */
+}
+
+#closeGalleryButton {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-family: Times New Roman, sans-serif; /* Шрифт текста */
+    font-size: 18px; /* Размер текста */
+    font-weight: bold; /* Начертание текста (жирный) */
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(230, 30, 30, 1);
+    padding: 3px 7px; /* Отступы внутри кнопки (верх/низ и лево/право) */
+    z-index: 1001;
+}
+
+
+.button-link {
+    font-size: 14px; /* Размер текста */
+    display: flex; /* Использовать flexbox */
+    justify-content: center; /* Центрировать по горизонтали */
+    align-items: center; /* Центрировать по вертикали */
+    padding: 2px 6px; /* Отступы внутри кнопки */
+    background-color: rgba(255, 0, 0, 1); /* Цвет фона кнопки */
+    color: rgba(255, 255, 255, 1); /* Цвет текста */
+    border-radius: 5px; /* Закруглить углы */
+    font-weight: bold; /* Жирный шрифт */
+    width: 315px; /* Ширина кнопки (можно задать нужное значение) */
+    height: 40px; /* Высота кнопки (можно задать нужное значение) */
+    border: 2px solid rgba(1, 1, 1, 0.7); /* Граница кнопки */
+}
+
+.button-link2 {
+    font-size: 14px; /* Размер текста */
+    display: flex;
+    justify-content: center; /* Центрируем по горизонтали */
+    align-items: center; /* Центрируем по вертикали */
+    padding: 2px 6px;
+    background-color: rgba(255, 0, 0, 1);
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1);
+    border-radius: 5px;
+    font-weight: bold;
+    width: 300px; /* Задайте нужную ширину */
+    height: 30px; /* Задайте нужную высоту */
+    border: 2px solid rgba(1, 1, 1, 0.7); 
+}
+
+.button-link3 {
+   font-weight: bold;
+   font-size: 14px;
+   color: rgba(1, 1, 1, 1);
+}
+
+
+
+/* Стили для последней таблицы с классом last */
+.last {
+    width: 35%; /* Задайте процентное значение ширины для последней таблицы */
+    margin-top: 3em; /* Новый отступ для последней таблицы */
+}
+.last th, .last td {
+    padding: 2px; /* Новое значение отступа для ячеек последней таблицы */
+    text-align: center;
+    background-color: rgba(100, 70, 70, 1);
+
+    font-weight: bold;
+    font-size: 1em;
+    text-align: center;
+    padding: 15px;
+}
+
+.footer-section {
+    margin-top: 20px;
+    padding: 5px;
+    background-color: rgba(255, 230, 230, 0.7);
+    text-align: center;
+}
+
+.footer-heading {
+    font-size: 22px;
+    color: rgba(0, 0, 0, 1);
+    text-align: left; 
+    text-align: center;
+
+}
+
+.footer-content {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 1);
+    text-align: left; 
+    text-align: center;
+
+}
+
+.footer-content strong {
+    font-weight: bold;
+}
+

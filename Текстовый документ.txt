@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Центр Обслуживания авто</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+    <link rel="stylesheet" type="text/css" href="styles_2.css">
+</head>
+	<body class = "body">
+	    <header class="header">
+	        <h1>Service Center Cars</h1>
+                <img src="1.png" width="220" height="120" class="logo">
+	    
+<nav class="menu">
+        	<ul class="nav">
+            	<li class="nav-item"><a href="index.html" class="nav-link">На главную</a>
+            	<li class="nav-item"><a href="#section1" class="nav-link">Detailing мойка</a>
+            	<li class="nav-item"><a href="#section2" class="nav-link">Полирока кузова</a>
+		<li class="nav-item"><a href="#section3" class="nav-link">Химчистка салона</a>
+		<li class="nav-item"><a href="#section4" class="nav-link">Оклейка защитной плёнки</a>
+		<li class="nav-item"><a href="#section5" class="nav-link">Контакты</a>
+        	</ul>
+    	</nav>
+
+	   </header>
+
+<main class="main-content">
+
+		 <!-- Подключение скриптов -->
+     	 	<script src="script4_2.js"></script>
+    	</main>
+
+	<footer>
+	    <section id="section5" class="footer-section">
+	        <h2 class="footer-heading">Контактная информация</h2>
+	        <p class="footer-content"><strong>Адрес:</strong> Город Владимир, проспект Строителей, 3/7,</p>
+	        <p class="footer-content"><strong>Телефон:</strong> +7 (XXX) XXX-XX-XX</p>
+	        <p class="footer-content"><strong>Электронная почта:</strong> ServiceCenterCars@mail.com</p>
+	    </section>
+	</footer>
+
+</body>
+</html>
