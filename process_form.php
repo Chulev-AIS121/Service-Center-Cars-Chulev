@@ -1,41 +1,20 @@
 <?php
-header('Content-Type: application/json');
-
-// Подключение к базе данных SQLite
 $db = new SQLite3('appointments.db');
-$response = array();
+$db->exec('CREATE TABLE IF NOT EXISTS appointments (id INTEGER PRIMARY KEY AUTOINCREMENT, date TEXT, time TEXT, phone TEXT, services TEXT)');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (isset($_POST['date']) && isset($_POST['time']) && isset($_POST['phone']) && isset($_POST['services'])) {
-        $date = $_POST['date'];
-        $time = $_POST['time'];
-        $phone = $_POST['phone'];
-        $services = $_POST['services'];
+    $date = $_POST['date'];
+    $time = $_POST['time'];
+    $phone = $_POST['phone'];
+    $services = implode(', ', $_POST['services']);
 
-        $stmt = $db->prepare('INSERT INTO client (date, time, phone, services) VALUES (:date, :time, :phone, :services)');
-        $stmt->bindValue(':date', $date, SQLITE3_TEXT);
-        $stmt->bindValue(':time', $time, SQLITE3_TEXT);
-        $stmt->bindValue(':phone', $phone, SQLITE3_TEXT);
-        $stmt->bindValue(':services', $services, SQLITE3_TEXT);
+    $stmt = $db->prepare('INSERT INTO appointments (date, time, phone, services) VALUES (:date, :time, :phone, :services)');
+    $stmt->bindValue(':date', $date, SQLITE3_TEXT);
+    $stmt->bindValue(':time', $time, SQLITE3_TEXT);
+    $stmt->bindValue(':phone', $phone, SQLITE3_TEXT);
+    $stmt->bindValue(':services', $services, SQLITE3_TEXT);
+    $stmt->execute();
 
-        if ($stmt->execute()) {
-            $response['success'] = true;
-            $response['message'] = "Данные успешно сохранены!";
-        } else {
-            $response['success'] = false;
-            $response['message'] = "Ошибка при сохранении данных.";
-        }
-    } else {
-        $response['success'] = false;
-        $response['message'] = "Не все поля были заполнены. Пожалуйста, заполните все поля и повторите попытку.";
-    }
-} else {
-    $response['success'] = false;
-    $response['message'] = "Доступ запрещен.";
+    echo 'Данные успешно сохранены в базе данных!';
 }
-
-echo json_encode($response);
-$db->close();
 ?>
-
-

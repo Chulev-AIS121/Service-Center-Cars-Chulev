@@ -35,14 +35,11 @@ fclose($file);
 		</form>
         </div>
     </div>	
-	 
-	</aside>	
 
 
     <pre><?php echo $data; ?></pre>
 
      	 	<script src="script4_1.js"></script>
-
 
 </body>
 </html>

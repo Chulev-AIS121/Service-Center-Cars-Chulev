@@ -142,18 +142,6 @@ tr:hover {
     background-color:  rgba(200, 10, 10, 1);
 }
 
-    .team-member {
-        display: flex;
-        align-items: center;
-        margin-bottom: 20px;
-    }
-
-    .image-container {
-        border: 1px solid black; /* Цвет и толщина рамки */
-        padding: 5px; /* Отступ вокруг изображения */
-        background-color: white;
-        margin-right: 20px; /* Отступ справа от изображения */
-    }
 
 #overlay {
     display: none;
@@ -200,10 +188,7 @@ textarea {
 }
 
 button {
-    display: flex;
-    align-items: center;
     padding: 10px 20px; /* Задаем отступы для кнопки */
-    cursor: pointer; /* Изменяем курсор на указатель при наведении */
 }
 
 
@@ -284,12 +269,6 @@ button {
     width: 300px; /* Задайте нужную ширину */
     height: 30px; /* Задайте нужную высоту */
     border: 2px solid rgba(1, 1, 1, 0.7); 
-}
-
-.button-link3 {
-   font-weight: bold;
-   font-size: 14px;
-   color: rgba(1, 1, 1, 1);
 }
 
 

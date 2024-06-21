@@ -105,14 +105,14 @@ main {
 
 /* Градиентная заливка фона страницы с классом body */
 .body {
-    background-image: url('fon_1.jpg');
+    background-image: url('fon_2.jpg');
     background-attachment: fixed;
     background-size: cover; /* или любое другое значение, например contain */
 
     font-family: 'Roboto', sans-serif;
     background-color: rgba(20, 20, 20, 1);
     color: rgba(255, 255, 255, 1);
-    font-size: 20px;
+    font-size: 19px;
     max-width: 1300px; /* значения ширины в пикселях */
     margin:  0 auto;; 
 }
@@ -205,23 +205,16 @@ main {
     margin-top: 20px;
     padding: 5px;
     background-color: rgba(255, 230, 230, 0.7);
-    text-align: center;
 }
 
 .footer-heading {
-    font-size: 22px;
+    font-size: 1.2em;
     color: rgba(0, 0, 0, 1);
-    text-align: left; 
-    text-align: center;
-
 }
 
 .footer-content {
-    font-size: 14px;
+    font-size: 1em;
     color: rgba(0, 0, 0, 1);
-    text-align: left; 
-    text-align: center;
-
 }
 
 .footer-content strong {

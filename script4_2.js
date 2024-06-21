@@ -7,34 +7,6 @@ document.querySelector(".close").addEventListener("click", function() {
     document.getElementById("overlay").style.display = "none";
 });
 
-function toggleVisibility(id) {
-    var element = document.getElementById(id);
-    if (element.style.display === "none") {
-        element.style.display = "block";
-    } else {
-        element.style.display = "none";
-    }
-}
-
-document.getElementById("surveyForm").addEventListener("submit", function(event) {
-    event.preventDefault();
-    var formData = new FormData(document.getElementById("surveyForm"));
-    
-    fetch("process_form.php", {
-        method: "POST",
-        body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            alert(data.message);
-            document.getElementById("overlay").style.display = "none";
-        } else {
-            alert(data.message);
-        }
-    })
-    .catch(error => console.error("Ошибка:", error));
-});
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -92,5 +64,4 @@ document.addEventListener('DOMContentLoaded', function() {
                 }, 800); // Измените значение времени задержки по вашему усмотрению
             });
         });
-        
     });

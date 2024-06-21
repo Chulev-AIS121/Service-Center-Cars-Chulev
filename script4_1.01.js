@@ -1,5 +1,22 @@
     document.addEventListener("DOMContentLoaded", function() {
 
+        var galleryContainer = document.getElementById('galleryContainer');
+        var closeGalleryButton = document.getElementById('closeGalleryButton');
+    
+        galleryContainer.addEventListener('scroll', function() {
+            closeGalleryButton.style.top = galleryContainer.scrollTop + 10 + 'px';
+        });
+    
+        document.getElementById("openGalleryButton").addEventListener("click", function() {
+            document.getElementById("galleryOverlay").style.display = "block";
+    
+            const gallerySection = document.getElementById("moveableElement");
+            gallerySection.scrollIntoView({ behavior: 'smooth' }); // Прокручиваем к секции с галереей
+        });
+    
+        document.getElementById("closeGalleryButton").addEventListener("click", function() {
+            document.getElementById("galleryOverlay").style.display = "none";
+        });
     
         const navLinks = document.querySelectorAll('.nav-link');
         const smoothScrollLinks = document.querySelectorAll('.smooth-scroll');
@@ -66,5 +83,4 @@
         event.preventDefault(); // Предотвращаем отправку формы (для примера)
         document.getElementById("overlay").style.display = "none";
     });
-    
 });    
